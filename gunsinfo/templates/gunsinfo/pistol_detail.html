@@ -1,0 +1,12 @@
+{% extends 'gunsinfo/base.html' %}
+
+{% block content %}
+
+<div class="features">
+        <h1>{{ pistol.title }}</h1>
+        <p>Модель {{ pistol.model }}</p>
+        <p>Калибр - {{pistol.calibre }}</p>
+        <p>Страна - {{pistol.country }}</p>
+        <p>Конструктор - {{pistol.author}}</p>
+</div>
+{% endblock %}

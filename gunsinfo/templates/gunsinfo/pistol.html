@@ -1,0 +1,14 @@
+{% extends 'gunsinfo/base.html' %}
+
+{% block content %}
+
+<div class="features">
+        <h1>{{ title }}</h1>
+        {% for pistol in pistols %}
+            <div class="alert alert-warning">
+                <h2>{{ pistol.model }}</h2>
+                <a href="{% url 'guns_detail' pistol.id %}" class="btn btn-warning">Смотреть...</a>
+            </div>
+        {% endfor %}
+</div>
+{% endblock %}

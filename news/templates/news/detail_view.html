@@ -1,0 +1,16 @@
+{% extends 'gunsinfo/base.html' %}
+
+
+{% block title %} {{ news.title }} {% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ news.title }}</h1>
+    <p>{{ news.date }}</p>
+    <p>{{ news.text }}</p>
+    <a href="{% url 'news_update' news.id %}" class="btn btn-warning">Редактировать статью</a>
+    <a href="{% url 'news_delete' news.id %}" class="btn btn-danger">Удалить статью</a>
+</div>
+
+{% endblock %}
+
